@@ -1,0 +1,23 @@
+header{
+    background-color: #FFFFFF;
+    color: #4A4A4A;
+    display: flex;
+    flex-direction: row;
+    gap: 33%;
+    padding-left: 18%;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    align-items: center;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+h1{
+    font-size: 50px;
+}
+
+.links{
+    display: flex;
+    flex-direction: row;
+    gap: 50%;
+    font-size: 25px;
+}
