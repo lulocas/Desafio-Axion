@@ -3,6 +3,12 @@ import { Link, useLocation } from 'react-router-dom';
 
 function Header() {
     const location = useLocation();
+    const logout = () => {
+        localStorage.removeItem("usuario"); 
+        alert("Logout realizado com sucesso!");
+        window.location.href = "/"; 
+    };
+
 
     return (
         <header>
@@ -12,6 +18,7 @@ function Header() {
                 <Link className={location.pathname === "/pessoas" ? "pessoas active" : "pessoas"} to="/pessoas">People</Link>
                 <Link className={location.pathname === "/locais" ? "locais active" : "locais"} to="/locais">Places</Link>
             </div>
+            <button onClick={logout}>Sair</button>
         </header>
     );
 }
