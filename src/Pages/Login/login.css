@@ -1,7 +1,41 @@
 .main{
-    background-image: url("/assets/bg.jpg");
+    height: 100vh; 
+    width: 100%;
+    background-color: #F9F9F9;
 }
 
-.tituloLog{
-    background-image: url("/assets/logo.png");
+.caixaLog{
+    position: relative;
+    width: 30%;
+    height: 70%;
+    background-color: #F9F9F9;
+    margin-left: 15%;
+    padding-top: 5%;
+    display: flex;
+    flex-direction: column;
+}
+
+.inputsLog{
+    display: flex;
+    flex-direction: column;
+}
+
+.logoImg{
+    width: 60%;
+}
+
+.divPai{
+    width: 60%;
+    height: 50%;
+    position: absolute;
+    margin-left: 40%;
+}
+
+.divImagemBG{
+    background-image: url("../../assets/bg.png");
+    background-size: contain; 
+    background-position: right bottom; 
+    background-repeat: no-repeat; 
+    height: 100vh; 
+    width: 100%;
 }

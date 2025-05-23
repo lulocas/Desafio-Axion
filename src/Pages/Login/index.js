@@ -1,6 +1,7 @@
 import './login.css';
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import logo from "../../assets/logo.png";
 
 
 function Login(){
@@ -17,7 +18,7 @@ function Login(){
                     const response = await fetch(url);
                     const json = await response.json();
                     console.log("Dados recebidos da API:", json);
-                    setUsuarios(json.data || []); 
+                    setUsuarios(json); 
                 } catch (error) {
                     console.error("Erro ao carregar API:", error);
                 }
@@ -27,13 +28,21 @@ function Login(){
         }, [])
 
         const verificar= (e) =>{
+            console.log(email);
+            console.log(password);
             let clienteEncontrado = null;
             e.preventDefault();
+            console.log("Usuários carregados:", usuarios);
+
             for (let i = 0; i < usuarios.length; i++) {
-                console.log(usuarios[i]);
-                if (usuarios[i].attributes.email === email && usuarios[i].attributes.password === password) {
-                    clienteEncontrado = usuarios[i];
-                    break; 
+                if (usuarios[i] && usuarios[i].email && usuarios[i].password) {
+                    if (usuarios[i].email === email && usuarios[i].password === password) {
+                        clienteEncontrado = usuarios[i];
+                        console.log("Cliente encontrado:", clienteEncontrado);
+                        break;
+                    }
+                } else {
+                    console.error("Usuário sem estrutura esperada:", usuarios[i]);
                 }
             }
             if (clienteEncontrado) {
@@ -46,9 +55,12 @@ function Login(){
         }
 
     return(
-        <div className='main'>
+        <div className="main">
+            <div className='divPai'>
+                <div className='divImagemBG'></div>
+            </div>
             <div className="caixaLog">
-                <h1 className='tituloLog'>Orange</h1>
+                <img className='logoImg' src={logo}/>
                 <form className="inputsLog" onSubmit={verificar}>
                     <label htmlFor="email">Email:</label>
                     <input type="email" name="email" placeholder="seunoma@email.com" value={email} 
