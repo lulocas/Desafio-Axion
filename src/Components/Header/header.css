@@ -17,11 +17,9 @@ header{
     padding-bottom: 25px;
 }
 
-h1{
-    font-size: 40px;
-    font-weight: 700;
-    letter-spacing: 10px;
-    padding-left: 18%;
+.logoNav{
+    width: 200px;
+    margin-left: 19%;
 }
 
 .links{

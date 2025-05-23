@@ -1,0 +1,35 @@
+.botaoCadastrar{
+    height: 55px;
+    border: none;
+    color: #F9F9F9;
+    font-size: 20px;
+    cursor: pointer;
+    background: #AE23A9;
+    background: linear-gradient(84deg,rgba(174, 35, 169, 1) 0%, rgba(220, 78, 27, 1) 100%);
+}
+
+.botaoCadastrar:hover{
+    background: #c63dc1;
+    background: linear-gradient(84deg,rgb(192, 70, 188) 0%, rgb(225, 109, 67) 100%);
+}
+
+.botaoLogin{
+    height: 55px;
+    border: 1px solid #4A4A4A;
+    margin-top: 40px;
+    background-color: #F9F9F9;
+    color:#4A4A4A;
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.botaoLogin:hover{
+    background-color: #ede8e8;
+}
+
+.politica{
+    margin-top: 10px;
+    font-weight: 300;
+    font-size: 15px;
+}

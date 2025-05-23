@@ -5,6 +5,7 @@ import Locais from './Pages/Locais';
 import Comidas from './Pages/Comidas';
 import Pessoas from './Pages/Pessoas';
 import RotaProtegida from "./Components/RotaProtegida";
+import Cadastro from './Pages/Cadastro';
 
 
 function RoutesApp(){
@@ -12,6 +13,7 @@ function RoutesApp(){
         <BrowserRouter>
             <Routes>
                 <Route path="/" element={<Login />} />
+                <Route path="/cadastro" element={<Cadastro />} />
                 <Route path="/locais" element={<RotaProtegida><Locais /></RotaProtegida>} />
                 <Route path="/comidas" element={<RotaProtegida><Comidas /></RotaProtegida>} />
                 <Route path="/pessoas" element={<RotaProtegida><Pessoas /></RotaProtegida>} />

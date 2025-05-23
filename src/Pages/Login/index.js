@@ -53,7 +53,7 @@ function Login(){
                 localStorage.setItem("usuario", JSON.stringify(clienteEncontrado));
                 navigate("/comidas");
             } else {
-                console.log("Usuário não encontrado");
+                alert("Usuário não encontrado");
             }
         }
 
@@ -92,7 +92,7 @@ function Login(){
                         <div className='traco'></div>
                     </div>
 
-                    <button className='botaoCadastro'>Cadastrar</button>
+                    <button className='botaoCadastro' onClick={() => navigate("/cadastro")}>Cadastrar</button>
 
                     <p className='termos'>Termos de uso • Política de privacidade</p>
                 </form>
