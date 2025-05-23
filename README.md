@@ -36,6 +36,12 @@ npm start
 - rodar o comando `npm run build` para gerar a build do projeto;
 - rodar o comando  `npm run develop` para executar a aplicação em modo de **desenvolvimento**;
 
+## 📈 Teste:
+- A api possui ja um cliente cadastrado para logar:
+ - email: teste@gmail.com
+ - senha: senha123
+- Se quiser pode cadastrar um novo
+
 ## Imagens do site
 
 ## Pagina Login:
