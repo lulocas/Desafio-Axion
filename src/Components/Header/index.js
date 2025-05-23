@@ -17,8 +17,8 @@ function Header() {
                 <Link className={location.pathname === "/comidas" ? "comidas active" : "comidas"} to="/comidas">Foods</Link>
                 <Link className={location.pathname === "/pessoas" ? "pessoas active" : "pessoas"} to="/pessoas">People</Link>
                 <Link className={location.pathname === "/locais" ? "locais active" : "locais"} to="/locais">Places</Link>
+                <a onClick={logout} className='botaoSair'>Exit</a>
             </div>
-            <button onClick={logout}>Sair</button>
         </header>
     );
 }

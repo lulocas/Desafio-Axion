@@ -2,6 +2,8 @@ import './login.css';
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import logo from "../../assets/logo.png";
+import mail from "../../assets/mail.png";
+import lock from "../../assets/lock.png";
 
 
 function Login(){
@@ -64,12 +66,18 @@ function Login(){
                 <img className='logoImg' src={logo}/>
                 <form className="inputsLog" onSubmit={verificar}>
                     <label className='labelLogin' htmlFor="email">Email</label>
-                    <input className="inputsLogin" type="email" name="email" placeholder="seunoma@email.com" value={email} 
-                        onChange={(e) => setEmail(e.target.value)}  required></input>
+                    <div className='iconeDiv'>
+                        <input className="inputsLogin" type="email" name="email" placeholder="seunoma@email.com" value={email} 
+                            onChange={(e) => setEmail(e.target.value)}  required></input>
+                        <img src={mail} className="inputIcon"/>
+                    </div>
                     <label className='labelLogin' htmlFor="senha">Password</label>
-                    <input className="inputsLogin" type={showPassword ? "text" : "password"} name="senha" placeholder='Password' value={password} 
-                        onChange={(e) => setPassword(e.target.value)} required>
-                    </input>
+                    <div className='iconeDiv'>
+                        <input className="inputsLogin" type={showPassword ? "text" : "password"} name="senha" placeholder='Password' value={password} 
+                            onChange={(e) => setPassword(e.target.value)} required>
+                        </input>
+                        <img src={lock} className="inputIcon"/>
+                    </div>
                     <div className='mostrarSenha'>
                         <input type="checkbox" id="mostrarSenha" checked={showPassword} 
                             onChange={(e) => setShowPassword(e.target.checked)} />
@@ -85,8 +93,11 @@ function Login(){
                     </div>
 
                     <button className='botaoCadastro'>Cadastrar</button>
+
+                    <p className='termos'>Termos de uso • Política de privacidade</p>
                 </form>
             </div>
+            <footer></footer>
         </div>
     );
 }

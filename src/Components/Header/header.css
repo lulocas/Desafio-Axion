@@ -27,10 +27,14 @@ h1{
 .links{
     display: flex;
     flex-direction: row;
-    gap: 30%;
+    gap: 20%;
     font-size: 23px;
     font-weight: 300;
     margin-left: 25%;
+}
+
+.botaoSair{
+    cursor: pointer;
 }
 
 .comidas, .pessoas, .locais{
@@ -44,7 +48,7 @@ h1{
     font-weight: 700; 
 }
 
-.comidas:hover, .pessoas:hover, .locais:hover {
+.comidas:hover, .pessoas:hover, .locais:hover, .botaoSair:hover {
     color: rgba(27, 27, 27, 0.3); 
 }
 

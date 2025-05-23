@@ -8,8 +8,8 @@
 
 .caixaLog{
     position: relative;
-    width: 28%;
-    height: 95%;
+    width: 29%;
+    height: 100vh;
     background-color: #F9F9F9;
     margin-left: 13%;
     padding-top: 3%;
@@ -39,13 +39,18 @@
 }
 
 .divImagemBG{
-    background-image: url("../../assets/bg.png");
+    background-image: url("../../assets/bg.jpg");
     background-size: contain; 
     background-position: right bottom; 
     background-repeat: no-repeat; 
     height: 100vh; 
     width: 100%;
-    position: fixed;
+    position: absolute;
+}
+
+.iconeDiv{
+    width: 100%;
+    position: relative;
 }
 
 .inputsLogin{
@@ -53,6 +58,21 @@
     margin-bottom: 20px;
     border: 1px solid #4A4A4A;
     padding-left: 20px;
+    padding-right: 40px;
+    width: 100%;
+}
+
+.inputsLogin::-ms-reveal{
+    display : none ;
+}
+
+.inputIcon{
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+    position: absolute;
+    right: 5px;
+    top: 25%;
 }
 
 .labelLogin{
@@ -89,8 +109,14 @@
     border: none;
     color: #F9F9F9;
     font-size: 20px;
+    cursor: pointer;
     background: #AE23A9;
     background: linear-gradient(84deg,rgba(174, 35, 169, 1) 0%, rgba(220, 78, 27, 1) 100%);
+}
+
+.botao:hover{
+    background: #c63dc1;
+    background: linear-gradient(84deg,rgb(192, 70, 188) 0%, rgb(225, 109, 67) 100%);
 }
 
 .linhaLogin{
@@ -117,4 +143,19 @@
     color:#4A4A4A;
     font-size: 20px;
     font-weight: 500;
+    cursor: pointer;
+}
+
+.botaoCadastro:hover{
+    background-color: #ede8e8;
+}
+
+.termos{
+    margin-top: 30px;
+    font-weight: 300;
+    font-size: 15px;
+}
+
+footer{
+    height: 200px;
 }
