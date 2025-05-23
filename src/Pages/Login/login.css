@@ -2,26 +2,33 @@
     height: 100vh; 
     width: 100%;
     background-color: #F9F9F9;
+    padding-top: 3%;
+    color: #4A4A4A;
 }
 
 .caixaLog{
     position: relative;
-    width: 30%;
-    height: 70%;
+    width: 28%;
+    height: 95%;
     background-color: #F9F9F9;
-    margin-left: 15%;
-    padding-top: 5%;
+    margin-left: 13%;
+    padding-top: 3%;
     display: flex;
     flex-direction: column;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+    padding-left: 30px;
+    padding-right: 30px;
 }
 
 .inputsLog{
     display: flex;
     flex-direction: column;
+    gap: 5px;
 }
 
 .logoImg{
     width: 60%;
+    margin-bottom: 50px;
 }
 
 .divPai{
@@ -38,4 +45,76 @@
     background-repeat: no-repeat; 
     height: 100vh; 
     width: 100%;
+    position: fixed;
+}
+
+.inputsLogin{
+    height: 55px;
+    margin-bottom: 20px;
+    border: 1px solid #4A4A4A;
+    padding-left: 20px;
+}
+
+.labelLogin{
+    font-weight: 600;
+}
+
+.mostrarSenha{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-bottom: 40px;
+}
+
+.mostrarSenha label{
+    font-weight: 400;
+}
+
+.mostrarSenha input{
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    border: 2px solid #4A4A4A;
+    margin-right: 5px;
+}
+
+.pPergunta{
+    font-size: 15px;
+    font-weight: 600;
+    padding-bottom: 40px;
+}
+
+.botao{
+    height: 55px;
+    border: none;
+    color: #F9F9F9;
+    font-size: 20px;
+    background: #AE23A9;
+    background: linear-gradient(84deg,rgba(174, 35, 169, 1) 0%, rgba(220, 78, 27, 1) 100%);
+}
+
+.linhaLogin{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    gap: 25px;
+    font-weight: 300;
+    padding-top: 40px;
+}
+
+.traco{
+    height: 1px;
+    width: 40%;
+    background-color: #4A4A4A;
+}
+
+.botaoCadastro{
+    height: 55px;
+    border: 1px solid #4A4A4A;
+    margin-top: 40px;
+    background-color: #F9F9F9;
+    color:#4A4A4A;
+    font-size: 20px;
+    font-weight: 500;
 }

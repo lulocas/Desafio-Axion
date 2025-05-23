@@ -8,6 +8,7 @@ function Login(){
     const [usuarios, setUsuarios] = useState([]);
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+    const [showPassword, setShowPassword] = useState(false);
     const navigate = useNavigate();
     
         useEffect(() => {
@@ -62,13 +63,28 @@ function Login(){
             <div className="caixaLog">
                 <img className='logoImg' src={logo}/>
                 <form className="inputsLog" onSubmit={verificar}>
-                    <label htmlFor="email">Email:</label>
-                    <input type="email" name="email" placeholder="seunoma@email.com" value={email} 
+                    <label className='labelLogin' htmlFor="email">Email</label>
+                    <input className="inputsLogin" type="email" name="email" placeholder="seunoma@email.com" value={email} 
                         onChange={(e) => setEmail(e.target.value)}  required></input>
-                    <label htmlFor="senha">Password</label>
-                    <input type="password" name="senha" placeholder='Password' value={password} 
-                        onChange={(e) => setPassword(e.target.value)} required></input>
-                    <button type="submit">Login</button>
+                    <label className='labelLogin' htmlFor="senha">Password</label>
+                    <input className="inputsLogin" type={showPassword ? "text" : "password"} name="senha" placeholder='Password' value={password} 
+                        onChange={(e) => setPassword(e.target.value)} required>
+                    </input>
+                    <div className='mostrarSenha'>
+                        <input type="checkbox" id="mostrarSenha" checked={showPassword} 
+                            onChange={(e) => setShowPassword(e.target.checked)} />
+                        <label htmlFor="mostrarSenha">Mostrar a senha.</label>
+                    </div>
+                    <p className='pPergunta'>Problemas para acessar sua conta?</p>
+                    <button className='botao' type="submit">Acessar</button>
+
+                    <div className='linhaLogin'>
+                        <div className='traco'></div>
+                        <span>Ou</span>
+                        <div className='traco'></div>
+                    </div>
+
+                    <button className='botaoCadastro'>Cadastrar</button>
                 </form>
             </div>
         </div>
